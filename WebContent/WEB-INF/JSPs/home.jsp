@@ -4,9 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Spring Server</title>
 </head>
 <body>
 Hello World!
+
+<!-- Don't do this in real applications! -->
+<p>Session: <%= session.getAttribute("name") %></p>
+
 </body>
 </html>
