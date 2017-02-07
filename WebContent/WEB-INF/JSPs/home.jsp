@@ -10,7 +10,11 @@
 Hello World!
 
 <!-- Don't do this in real applications! -->
-<p>Session: <%= session.getAttribute("name") %></p>
+<!-- p>Session: <!-- %= session.getAttribute("name") %--><!-- /p-->
+
+Request: <%= session.getAttribute("name") %></p>
+
+Request (using EL): ${name}</p>
 
 </body>
 </html>
