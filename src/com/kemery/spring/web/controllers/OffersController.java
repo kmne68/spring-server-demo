@@ -15,8 +15,8 @@ public class OffersController {
 	@RequestMapping("/")
 	public String showHome(Model model) {
 		
-		model.addAttribute("name", "Treebeard");
-		
+		//model.addAttribute("name", "Treebeard");
+		model.addAttribute("name", "<b>Fangorn</b");
 		return "home";
 	}
 	
