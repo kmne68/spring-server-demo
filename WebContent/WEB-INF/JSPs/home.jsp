@@ -12,25 +12,11 @@
 <body>
 	Hello World!
 
-	<!-- Don't do this in real applications! -->
-	<!-- p>Session: <!-- %= session.getAttribute("name") %-->
-	<!-- /p-->
-
-	<!-- Request: <!--%= session.getAttribute("name") %></p-->
-
-	<!-- p>Request (using EL): ${name}</p-->
-
-	<p>
-		<c:out value="${name}"></c:out>
-	</p>
-
-	<sql:query var="rs" dataSource="jdbc/spring">
-select id, name, email, text from offers
-</sql:query>
-
-	<c:forEach var="row" items="${rs.rows}">
-    ID ${row.id}<br />
-    Name ${row.name}<br />
+	<c:forEach var="row" items="${offers}">
+    ID: ${row.id}<br />
+    Name: ${row.name}<br />
+    Email: ${row.email}<br />
+    Text: ${row.text}<br />
 	</c:forEach>
 
 </body>
