@@ -53,6 +53,13 @@ public class OffersController {
 		return "createoffer";
 	}
 	
+	
+	@RequestMapping("/docreate")
+	public String doCreate() {
+
+		return "offerCreated";
+	}
+	
 /*	@RequestMapping("/")
 	public ModelAndView showHome() {
 		
