@@ -9,7 +9,7 @@
 <body>
 
 
-	<form method="get" action="${pageContext.request.contextPath}/docreate">
+	<form method="post" action="${pageContext.request.contextPath}/docreate">
 
 
 		<table>
@@ -23,7 +23,7 @@
 			</tr>
 			<tr>
 				<td>Your Offer:</td>
-				<td><textarea rows="10" cols="10"></textarea></td>
+				<td><textarea name="text" rows="10" cols="10"></textarea></td>
 			</tr>
 			<tr>
 				<td></td><td><input value="Create advert" type="submit" /></td>
