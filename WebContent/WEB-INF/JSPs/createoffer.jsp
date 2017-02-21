@@ -3,35 +3,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-
-<style type="text/css">
-
-.control {
-	margin-left: 10px;
-}
-
-.formtable {
-	width: 400px;
-	padding: 10px;
-	border: 1px solid blue;
-}
-
-.label {
-	text-align: right;
-	vertical-align: top;
-}
-
-input[type=text] {
-	width: 250px;
-	}
-	
-textarea {
-	width: 250px;
-	height: 300px;
-}	
-</style>
-
+<link href="${pageContext.request.contextPath}/static/css/main.css" rel="stylesheet" type="text/css"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <title>Insert title here</title>
 </head>
 

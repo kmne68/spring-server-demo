@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+
+.control {
+	margin-left: 10px;
+}
+
+.formtable {
+	width: 400px;
+	padding: 10px;
+	border: 1px solid blue;
+}
+
+.label {
+	text-align: right;
+	vertical-align: top;
+}
+
+input[type=text] {
+	width: 250px;
+	}
+	
+textarea {
+	width: 250px;
+	height: 300px;
+}	
