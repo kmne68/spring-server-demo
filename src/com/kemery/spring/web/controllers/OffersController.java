@@ -51,8 +51,9 @@ public class OffersController {
 	
 	
 	@RequestMapping("/createoffer")
-	public String createOffer() {
+	public String createOffer(Model model) {
 
+		model.addAttribute("offer", new Offer());
 		return "createoffer";
 	}
 	
@@ -68,11 +69,11 @@ public class OffersController {
 			for(ObjectError error : errors) {
 				System.out.println(error.getDefaultMessage());
 			}
+			// If form doesn't validate, stay on page
+			return "createoffer";
 			
-		} else {
-			System.out.println("Form validated");
-		}
-		
+		}		
+		System.out.println("Form validated.");
 		System.out.println(offer);
 		return "offerCreated";
 	}

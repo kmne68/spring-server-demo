@@ -3,7 +3,7 @@
   <groupId>com.kemery.springserver</groupId>
   <artifactId>spring-server-maven</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
+  <!-- packaging>war</packaging THIS WAS CAUSING AN ERROR THAT DID NOT PREVENT PROGRAM FROM RUNNING -->
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
