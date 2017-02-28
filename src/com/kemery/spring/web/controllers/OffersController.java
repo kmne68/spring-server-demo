@@ -67,8 +67,8 @@ public class OffersController {
 			List<ObjectError> errors = result.getAllErrors();
 			
 			for(ObjectError error : errors) {
-				System.out.println(error.getDefaultMessage());
-			}
+				System.out.println(error.getDefaultMessage()); 
+			} 
 			// If form doesn't validate, stay on page
 			return "createoffer";
 			
