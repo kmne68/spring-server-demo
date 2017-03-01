@@ -81,5 +81,15 @@
   		<artifactId>hibernate-validator</artifactId>
   		<version>5.3.4.Final</version>
   	</dependency>
+  	<dependency>
+  		<groupId>commons-validator</groupId>
+  		<artifactId>commons-validator</artifactId>
+  		<version>1.6</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.opendof.core-java-internal</groupId>
+  		<artifactId>dof-domain-storage-javadb-routines</artifactId>
+  		<version>3.0.1</version>
+  	</dependency>
   </dependencies>
 </project>
