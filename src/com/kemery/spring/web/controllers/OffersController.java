@@ -62,19 +62,12 @@ public class OffersController {
 	public String doCreate(Model model, @Valid Offer offer, BindingResult result) {
 
 		if(result.hasErrors()) {
-			System.out.println("Form does not validate.");
-			
-			List<ObjectError> errors = result.getAllErrors();
-			
-			for(ObjectError error : errors) {
-				System.out.println(error.getDefaultMessage()); 
-			} 
 			// If form doesn't validate, stay on page
-			return "createoffer";
-			
-		}		
-		System.out.println("Form validated.");
-		System.out.println(offer);
+			return "createoffer";			
+		}	
+		
+		offersService.create(offer);
+		
 		return "offerCreated";
 	}
 	
