@@ -3,6 +3,10 @@
 	<name>SpringServerTutorial</name>
 	<comment></comment>
 	<projects>
+		<project>dbdemo</project>
+		<project>MavenDemo</project>
+		<project>RemoteSystemsTempFiles</project>
+		<project>Servers</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
