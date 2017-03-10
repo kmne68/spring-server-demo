@@ -110,10 +110,5 @@
     	<artifactId>javax.inject</artifactId>
     	<version>1</version>
     </dependency>
-  	    <dependency>
-  	    	<groupId>org.apache.tomcat</groupId>
-  	    	<artifactId>tomcat-jdbc</artifactId>
-  	    	<version>9.0.0.M17</version>
-  	    </dependency>
   </dependencies>
 </project>
