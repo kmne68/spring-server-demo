@@ -29,3 +29,8 @@ textarea {
 	width: 250px;
 	height: 300px;
 }	
+
+table.offers {
+	padding: 10px;
+	border: 1px solid gray;
+}
