@@ -7,13 +7,13 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
-	<context:component-scan base-package="com.kemery.dbdemo">
+	<context:component-scan base-package="com.kemery.SpringServerTutorial">
 	</context:component-scan>
 
 	<bean id="propertyConfigurer"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="location"
-			value="classpath:com/kemery/dbdemo/props/jdbc.properties"></property>
+			value="classpath:com/kemery/SpringServerTutorial/src/props/jdbc.properties"></property>
 	</bean>
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
@@ -23,11 +23,15 @@
 		<property name="password" value="${jdbc.password}"></property>
 		<property name="username" value="${jdbc.username}"></property>
 	</bean>
-	<bean id="OffersDAO" name="OffersDAO" class="model.OffersDAO"></bean>
+	<bean id="OffersDAO" name="OffersDAO"
+		class="com.kemery.spring.web.dao.OffersDAO">
+	</bean>
 	<bean id="transactionManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 	<tx:annotation-driven />
+	<context:property-placeholder
+		location="/SpringServerTutorial/src/props/jdbc.properties" />
 </beans>
 
