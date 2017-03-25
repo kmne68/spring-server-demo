@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
@@ -9,6 +8,8 @@
 
 	<context:component-scan base-package="com.kemery.SpringServerTutorial">
 	</context:component-scan>
+	<context:property-placeholder
+		location="/SpringServerTutorial/src/props/jdbc.properties" />
 
 	<bean id="propertyConfigurer"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
@@ -18,20 +19,17 @@
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
-		<property name="driverClassName" value="${jdbc.driverClassName}"></property>
+		<property name="driverClassName" value="${jdbc.driver}"></property>  <!-- removed 'ClassName' from after .driver -->
 		<property name="url" value="${jdbc.url}"></property>
 		<property name="password" value="${jdbc.password}"></property>
 		<property name="username" value="${jdbc.username}"></property>
 	</bean>
-	<bean id="OffersDAO" name="OffersDAO"
-		class="com.kemery.spring.web.dao.OffersDAO">
+	<bean id="OffersDAO" name="OffersDAO" class="com.kemery.spring.web.dao.OffersDAO">
 	</bean>
 	<bean id="transactionManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 	<tx:annotation-driven />
-	<context:property-placeholder
-		location="/SpringServerTutorial/src/props/jdbc.properties" />
 </beans>
 

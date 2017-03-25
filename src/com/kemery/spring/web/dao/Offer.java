@@ -6,6 +6,8 @@ import javax.validation.constraints.Size;
 
 import com.kemery.spring.web.validation.ValidEmail;
 
+// Creates a row at a time in the Offer objects in the DB
+
 public class Offer {
 
 	private int id;
