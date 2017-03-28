@@ -20,12 +20,13 @@ import org.springframework.transaction.annotation.Transactional;
 @Component("offersDao")
 public class OffersDAO {
 
-	private NamedParameterJdbcTemplate jdbc;
+//	private NamedParameterJdbcTemplate jdbc;
+	private JdbcTemplate jdbc;
 
 	
 	@Autowired
 	public void setDataSource(DataSource jdbc) {
-		this.jdbc = new NamedParameterJdbcTemplate(jdbc);
+		this.jdbc = new JdbcTemplate(jdbc); //new NamedParameterJdbcTemplate(jdbc);
 	}
 
 	public List<Offer> getOffers() {
